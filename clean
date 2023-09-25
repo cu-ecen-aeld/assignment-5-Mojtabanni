@@ -1,0 +1,11 @@
+#!/bin/bash
+#Script to build buildroot configuration
+#Author: Siddhant Jajoo
+
+source shared.sh
+
+EXTERNAL_REL_BUILDROOT=../base_external
+
+echo "Distclean Everythings"
+make -C buildroot BR2_EXTERNAL=${EXTERNAL_REL_BUILDROOT} distclean
+
